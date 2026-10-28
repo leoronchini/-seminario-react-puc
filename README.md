@@ -11,6 +11,7 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 | `aula1/` | Revisão de HTML, CSS e JavaScript: `filmes.html`, `estilo.css` e `script.js` |
 | `aula2/` | Primeiros passos em React: projeto criado com Vite e os passos da aula (componentes, props e imagem) |
 | `aula3/` | Estado em React: `useState` e hook próprio (`useNotas`) |
+| `aula4/` | Consumo de API: filmes buscados na OMDb com `fetch` e `useEffect` |
 
 ### Passos da aula 2 (`aula2/`)
 
@@ -18,7 +19,7 @@ Cada pasta de passo é uma cópia completa do `src/` e contém o código do pass
 
 1. Projeto inicial: criado com o Vite, conforme `SLIDE-CRIACAO.md`
 2. `2-src-com-componentes/`: componentes `Cabecalho` e `Avaliacao`, com a tela idêntica à do `src/`
-3. `3-src-com-props/`: o passo 2 mais o componente `Filme`, que recebe `titulo` e `ano` por props
+3. `3-src-com-props/`: o passo 2 com o componente `Filme` (que recebe `titulo` e `ano` por props) movido para um arquivo próprio
 4. `4-src-com-imagem/`: o passo 3 mais a imagem do filme, escolhida pelo nome do arquivo por uma prop
 
 Também estão em `aula2/`:
@@ -31,6 +32,10 @@ Também estão em `aula2/`:
 - `src/`: o código do passo 4 da aula 2 com `useState`: as notas ficam guardadas no `App.jsx`, por `id` do filme
 - `1-hook/`: o mesmo código com a lógica movida para um hook próprio, `hooks/useNotas.js`
 
+### Passos da aula 4 (`aula4/`)
+
+- `src/`: o código final da aula 3 com os filmes vindos da API da OMDb, no lugar do array `filmes`. Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
+
 ## Pré-requisitos
 
 - Node.js na versão **20.19 ou mais nova** (o npm já vem junto)
@@ -42,7 +47,7 @@ Para instalar o Node, veja `aula2/INSTALAR-NODE.md`.
 
 **Aula 1:** abra `aula1/filmes.html` no navegador.
 
-**Aulas 2 e 3:** dentro da pasta da aula, instale as dependências e execute o projeto:
+**Aulas 2, 3 e 4:** dentro da pasta da aula, instale as dependências e execute o projeto (a aula 4 precisa antes de uma chave da OMDb no arquivo `.env`, veja `aula4/README.md`):
 
 ```bash
 cd aula2

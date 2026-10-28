@@ -7,6 +7,16 @@ const filmes = [
   { id: 3, titulo: 'Matrix', ano: 1999 },
 ]
 
+function Filme({ titulo, ano }) {
+  return (
+    <article className="filme">
+      <h2>{titulo}</h2>
+      <p>{ano}</p>
+      <Avaliacao />
+    </article>
+  )
+}
+
 export default function App() {
   return (
     <>
@@ -14,11 +24,7 @@ export default function App() {
 
       <main className="lista">
         {filmes.map((filme) => (
-          <article key={filme.id} className="filme">
-            <h2>{filme.titulo}</h2>
-            <p>{filme.ano}</p>
-            <Avaliacao />
-          </article>
+          <Filme key={filme.id} titulo={filme.titulo} ano={filme.ano} />
         ))}
       </main>
     </>
