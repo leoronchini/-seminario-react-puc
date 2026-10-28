@@ -14,7 +14,7 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 
 ### Passos da aula 2 (`aula2/`)
 
-Cada pasta de passo é uma cópia completa do `src/` e contém o código do passo anterior:
+Cada pasta de passo é uma cópia completa do `src/` e contém o código do passo anterior. Todos usam o array `filmes` (`id`, `titulo` e `ano`) como fonte dos dados, e no passo 4 ele ganha o campo `imagem`:
 
 1. Projeto inicial: criado com o Vite, conforme `SLIDE-CRIACAO.md`
 2. `2-src-com-componentes/`: componentes `Cabecalho` e `Avaliacao`, com a tela idêntica à do `src/`
@@ -28,8 +28,8 @@ Também estão em `aula2/`:
 
 ### Passos da aula 3 (`aula3/`)
 
-- `1-usestate/`: as notas ficam guardadas com `useState`
-- `2-hook/`: a mesma lógica movida para um hook próprio, `hooks/useNotas.js`
+- `src/`: o código do passo 4 da aula 2 com `useState`: as notas ficam guardadas no `App.jsx`, por `id` do filme
+- `1-hook/`: o mesmo código com a lógica movida para um hook próprio, `hooks/useNotas.js`
 
 ## Pré-requisitos
 

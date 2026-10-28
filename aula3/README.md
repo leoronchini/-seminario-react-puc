@@ -9,26 +9,23 @@ npm run dev
 
 Abra o endereço que aparecer (normalmente http://localhost:5173).
 
-Estrutura de `src/`:
+## Código inicial (`src/`)
 
-- `App.jsx` - guarda as notas (estado) e a lista de filmes
-- `components/Cabecalho.jsx` - logo, título e resumo (quantos avaliados e média)
-- `components/Filme.jsx` - card de um filme
+É o código do passo 4 da aula 2, já com `useState`:
+
+- `App.jsx` - lista `filmes` (a mesma da aula 2), guarda as notas por `id` com `useState` e calcula quantos filmes foram avaliados e a média
+- `components/Cabecalho.jsx` - título e resumo (quantos avaliados e média)
+- `components/Filme.jsx` - card de um filme, com o pôster
 - `components/Avaliacao.jsx` - slider da nota e texto "Sua nota"
-- `assets/cinema.svg` - imagem do cabeçalho (troque pela sua)
-- `index.css` - o mesmo CSS da aula 1
+- `assets/` - pôsteres dos filmes
+- `index.css` - o mesmo CSS da aula 2
 
-## Pastas da aula
+## Pasta da aula
 
-Cada pasta e uma copia completa do `src/`, para copiar de uma vez para dentro de `src/`:
+- `1-hook/` - cópia completa do `src/`, com a lógica do `useState` movida para um hook próprio, `hooks/useNotas.js`
 
-- `1-usestate/` - guarda as notas com `useState` no `App.jsx`
-- `2-hook/` - leva esse mesmo codigo para um hook proprio, `hooks/useNotas.js`
-
-Para usar uma delas (dentro da pasta `aula3`):
+Para usar (dentro da pasta `aula3`):
 
 ```
-xcopy 2-hook src /E /Y /I
+xcopy 1-hook src /E /Y /I
 ```
-
-Troque `2-hook` por `1-usestate` para ver a primeira versao.
