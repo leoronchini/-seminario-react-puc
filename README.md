@@ -17,9 +17,9 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 Cada pasta de passo é uma cópia completa do `src/` e contém o código do passo anterior:
 
 1. Projeto inicial: criado com o Vite, conforme `SLIDE-CRIACAO.md`
-2. `2-src-com-componentes/`: componentes `Cabecalho` e `Avaliacao`
-3. `3-src-com-props/`: o card inteiro vira o componente `Filme`, com props
-4. `4-src-com-imagem/`: a imagem do filme é escolhida pelo nome, por uma prop
+2. `2-src-com-componentes/`: componentes `Cabecalho` e `Avaliacao`, com a tela idêntica à do `src/`
+3. `3-src-com-props/`: o passo 2 mais o componente `Filme`, que recebe `titulo` e `ano` por props
+4. `4-src-com-imagem/`: o passo 3 mais a imagem do filme, escolhida pelo nome do arquivo por uma prop
 
 Também estão em `aula2/`:
 
