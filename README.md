@@ -12,6 +12,7 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 | `aula2/` | Primeiros passos em React: projeto criado com Vite e os passos da aula (componentes, props e imagem) |
 | `aula3/` | Estado em React: `useState` e hook próprio (`useNotas`) |
 | `aula4/` | Consumo de API: filmes buscados na OMDb com `fetch` e `useEffect` |
+| `aula5/` | Projeto final: catálogo de filmes, pesquisa por título e CSS completo |
 
 ### Passos da aula 2 (`aula2/`)
 
@@ -36,6 +37,12 @@ Também estão em `aula2/`:
 
 - `src/`: o código final da aula 3 com os filmes vindos da API da OMDb, no lugar do array `filmes`. Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
 
+### Passos da aula 5 (`aula5/`)
+
+- `src/`: o código final da aula 4 com um catálogo de 24 filmes e um aviso de "carregando"
+- `1-pesquisa/`: o passo anterior com um campo de busca que filtra o catálogo pelo título
+- `2-estilo/`: o passo anterior com classes para o CSS e o `index.css` completo, com o visual final
+
 ## Pré-requisitos
 
 - Node.js na versão **20.19 ou mais nova** (o npm já vem junto)
@@ -47,7 +54,7 @@ Para instalar o Node, veja `aula2/INSTALAR-NODE.md`.
 
 **Aula 1:** abra `aula1/filmes.html` no navegador.
 
-**Aulas 2, 3 e 4:** dentro da pasta da aula, instale as dependências e execute o projeto (a aula 4 precisa antes de uma chave da OMDb no arquivo `.env`, veja `aula4/README.md`):
+**Aulas 2 a 5:** dentro da pasta da aula, instale as dependências e execute o projeto (as aulas 4 e 5 precisam antes de uma chave da OMDb no arquivo `.env`, veja `aula4/README.md`):
 
 ```bash
 cd aula2
