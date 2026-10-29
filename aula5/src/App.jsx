@@ -1,47 +1,69 @@
+import { useState } from 'react'
 import useFilmes from './hooks/useFilmes.js'
+import usePesquisa from './hooks/usePesquisa.js'
+import useMinhaLista from './hooks/useMinhaLista.js'
 import useNotas from './hooks/useNotas.js'
 import Cabecalho from './components/Cabecalho.jsx'
+import Abas from './components/Abas.jsx'
+import Busca from './components/Busca.jsx'
 import Filme from './components/Filme.jsx'
 
-const ids = [
-  'tt0816692', // Interestelar
-  'tt6751668', // Parasita
-  'tt0133093', // Matrix
-  'tt0111161', // Um Sonho de Liberdade
-  'tt0068646', // O Poderoso Chefão
-  'tt0468569', // Batman: O Cavaleiro das Trevas
-  'tt0110912', // Pulp Fiction
-  'tt0137523', // Clube da Luta
-  'tt0109830', // Forrest Gump
-  'tt1375666', // A Origem
-  'tt0167260', // O Senhor dos Anéis: O Retorno do Rei
-  'tt0076759', // Star Wars: Uma Nova Esperança
-  'tt0114369', // Seven
-  'tt0245429', // A Viagem de Chihiro
-  'tt0172495', // Gladiador
-  'tt0120815', // O Resgate do Soldado Ryan
-  'tt0317248', // Cidade de Deus
-  'tt0140888', // Central do Brasil
-  'tt0861739', // Tropa de Elite
-  'tt2380307', // Viva: A Vida é uma Festa
-  'tt0114709', // Toy Story
-  'tt2582802', // Whiplash
-  'tt0482571', // O Grande Truque
-  'tt7286456', // Coringa
+const titulos = [
+  'Interstellar',
+  'The Lord of the Rings: The Fellowship of the Ring',
+  'The Matrix',
+  'The Shawshank Redemption',
+  'The Godfather',
+  'The Dark Knight',
+  'Pulp Fiction',
+  'Fight Club',
+  'Forrest Gump',
+  'Inception',
 ]
 
 export default function App() {
-  const { filmes, erro, carregando } = useFilmes(ids)
-  const { notas, avaliar, avaliados, media } = useNotas()
+  const { filmes, erro, carregando } = useFilmes(titulos)
+  const { resultados, pesquisando, erroBusca, pesquisar } = usePesquisa()
+  const { minhaLista, estaNaLista, alternar } = useMinhaLista()
+  const [busca, setBusca] = useState('')
+  const [aba, setAba] = useState('catalogo')
+
+  const noCatalogo = aba === 'catalogo'
+  const lista = noCatalogo ? resultados ?? filmes : minhaLista
+  const { notas, avaliar, avaliados, media } = useNotas(lista)
+
+  function limpar() {
+    setBusca('')
+    pesquisar('')
+  }
 
   return (
     <>
-      <Cabecalho avaliados={avaliados} total={filmes.length} media={media} />
-      {erro && <p>{erro}</p>}
-      {carregando && <p className="carregando">Carregando filmes...</p>}
+      <header className="topo">
+        <Cabecalho avaliados={avaliados} total={lista.length} media={media} />
+        <Abas atual={aba} onMudar={setAba} quantidade={minhaLista.length} />
+        {noCatalogo && (
+          <Busca
+            valor={busca}
+            onMudar={setBusca}
+            onBuscar={() => pesquisar(busca)}
+            onLimpar={limpar}
+            buscando={pesquisando}
+          />
+        )}
+      </header>
+      {noCatalogo && erro && <p className="erro">{erro}</p>}
+      {noCatalogo && erroBusca && <p className="erro">{erroBusca}</p>}
+      {noCatalogo && carregando && <p className="carregando">Carregando filmes...</p>}
+      {noCatalogo && resultados && resultados.length === 0 && (
+        <p className="vazio">Nenhum filme encontrado.</p>
+      )}
+      {!noCatalogo && minhaLista.length === 0 && (
+        <p className="vazio">Sua lista está vazia. Adicione filmes pelo catálogo.</p>
+      )}
 
       <main className="lista">
-        {filmes.map((filme) => (
+        {lista.map((filme) => (
           <Filme
             key={filme.id}
             titulo={filme.titulo}
@@ -49,6 +71,8 @@ export default function App() {
             imagem={filme.imagem}
             nota={notas[filme.id]}
             onAvaliar={(nota) => avaliar(filme.id, nota)}
+            naLista={estaNaLista(filme.id)}
+            onAlternarLista={() => alternar(filme)}
           />
         ))}
       </main>

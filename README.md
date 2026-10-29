@@ -12,7 +12,7 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 | `aula2/` | Primeiros passos em React: projeto criado com Vite e os passos da aula (componentes, props e imagem) |
 | `aula3/` | Estado em React: `useState` e hook próprio (`useNotas`) |
 | `aula4/` | Consumo de API: filmes buscados na OMDb com `fetch` e `useEffect`, e pesquisa por título |
-| `aula5/` | Projeto final: catálogo de filmes, pesquisa por título e CSS completo |
+| `aula5/` | Projeto final: minha lista de filmes favoritos, notas em estrelas e CSS completo |
 
 ### Passos da aula 2 (`aula2/`)
 
@@ -37,12 +37,11 @@ Também estão em `aula2/`:
 
 - `src/`: o código final da aula 3 com 10 filmes (escolhidos pelo nome) vindos da API da OMDb, no lugar do array `filmes`, e um aviso de "carregando". Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
 - `2-src-com-pesquisa/`: o passo anterior com um campo de busca e um botão **Buscar**, que procura filmes pelo título na OMDb só quando o botão é clicado
+- `src-meus-filmes/`: o passo anterior com a **Minha lista**: botão para adicionar filmes aos preferidos, aba para ver e avaliar só esses filmes, lista e notas salvas no navegador
 
-### Passos da aula 5 (`aula5/`)
+### Projeto final (`aula5/`)
 
-- `src/`: o código final da aula 4 com o catálogo aumentado de 10 para 24 filmes
-- `1-pesquisa/`: o passo anterior com um campo de busca que filtra o catálogo pelo título
-- `2-estilo/`: o passo anterior com classes para o CSS e o `index.css` completo, com o visual final
+- `src/`: o código final da aula 4 (com pesquisa) com tudo de uma vez: a **Minha lista** (botão para adicionar filmes à lista de favoritos, aba para ver e avaliar só esses filmes, lista e notas salvas no navegador), as notas em estrelas acesas e o `index.css` completo com o visual final
 
 ## Pré-requisitos
 

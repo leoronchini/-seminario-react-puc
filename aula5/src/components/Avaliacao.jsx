@@ -1,6 +1,9 @@
+import Estrelas from './Estrelas.jsx'
+
 export default function Avaliacao({ nota, onAvaliar }) {
   return (
     <>
+      <Estrelas nota={nota} />
       <input
         type="range"
         min="1"

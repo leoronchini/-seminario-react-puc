@@ -19,24 +19,24 @@ Use a mesma chave da aula 4. Se o projeto da aula 4 já tem o `.env`, copie o ar
 copy .env.example .env
 ```
 
-O passo a passo para conseguir a chave está no `README.md` da pasta `aula4`. O `.env` não vai para o GitHub.
+O passo a passo para conseguir a chave, e o limite de requisições, estão no `README.md` da pasta `aula4` e no `.env.example`. O `.env` não vai para o GitHub.
 
-## Código inicial (`src/`)
+## Projeto final (`src/`)
 
-É o código final da aula 4, agora com um catálogo de 24 filmes:
+É o código final da aula 4 (`aula4/2-src-com-pesquisa/`) com a **Minha lista**, as **estrelas** e o **CSS completo**, tudo de uma vez:
 
-- `App.jsx` - lista `ids` com 24 filmes (os 10 da aula 4 mais 14 novos) e a mesma tela da aula 4
-- `hooks/useFilmes.js`, `services/omdb.js`, `hooks/useNotas.js`, os componentes e o `index.css` - iguais aos da aula 4
+- `App.jsx` - catálogo com pesquisa e abas **Catálogo** e **Minha lista**
+- `hooks/useArmazenado.js` - como o `useState`, mas guarda o valor no navegador
+- `hooks/useMinhaLista.js` - a lista de filmes favoritos do aluno
+- `hooks/useNotas.js` - as notas, agora salvas no navegador
+- `components/Abas.jsx` - os botões **Catálogo** e **Minha lista**
+- `components/Filme.jsx` - card do filme, com o botão **Adicionar à minha lista**
+- `components/Avaliacao.jsx` e `components/Estrelas.jsx` - barra de nota e estrelas acesas
+- `index.css` - o CSS completo, com o visual final
+- `hooks/useFilmes.js`, `hooks/usePesquisa.js`, `services/omdb.js`, `components/Busca.jsx` e `Cabecalho.jsx` - iguais aos da aula 4
 
-## Passos da aula
+O `src/README.md` lista tudo o que mudou em relação à aula 4.
 
-Cada pasta é uma cópia completa do `src/` naquele passo e contém todo o código do passo anterior:
+## Onde ficam os dados
 
-- `1-pesquisa/` - campo de busca que filtra o catálogo pelo título
-- `2-estilo/` - classes para o CSS e o arquivo `index.css` completo, com o visual final
-
-Para usar um passo (dentro da pasta `aula5`):
-
-```
-xcopy 1-pesquisa src /E /Y /I
-```
+A **Minha lista** e as notas ficam salvas no próprio navegador (`localStorage`), não em um servidor. Elas continuam depois de recarregar a página, mas só existem naquele navegador e naquele computador, e somem se os dados do navegador forem apagados.

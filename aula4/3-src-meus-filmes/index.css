@@ -19,3 +19,11 @@ body {
   height: 240px;
   object-fit: cover;
 }
+
+.aba.ativa {
+  font-weight: bold;
+}
+
+.botao-lista.ativo {
+  font-weight: bold;
+}
