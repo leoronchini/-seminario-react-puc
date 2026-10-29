@@ -27,6 +27,11 @@ export default function App() {
   const lista = resultados ?? filmes
   const { notas, avaliar, avaliados, media } = useNotas(lista)
 
+  function limpar() {
+    setBusca('')
+    pesquisar('')
+  }
+
   return (
     <>
       <Cabecalho avaliados={avaliados} total={lista.length} media={media} />
@@ -34,6 +39,7 @@ export default function App() {
         valor={busca}
         onMudar={setBusca}
         onBuscar={() => pesquisar(busca)}
+        onLimpar={limpar}
         buscando={pesquisando}
       />
       {erro && <p>{erro}</p>}

@@ -1,4 +1,4 @@
-export default function Busca({ valor, onMudar, onBuscar, buscando }) {
+export default function Busca({ valor, onMudar, onBuscar, onLimpar, buscando }) {
   function enviar(e) {
     e.preventDefault()
     onBuscar()
@@ -15,6 +15,9 @@ export default function Busca({ valor, onMudar, onBuscar, buscando }) {
       />
       <button type="submit" disabled={buscando}>
         {buscando ? 'Buscando...' : 'Buscar'}
+      </button>
+      <button type="button" onClick={onLimpar} disabled={buscando}>
+        Limpar
       </button>
     </form>
   )
