@@ -52,10 +52,10 @@ Os pôsteres da pasta `assets/` deixam de ser usados: as imagens agora vêm da O
 Cada pasta é uma cópia completa do `src/` naquele passo e contém todo o código do passo anterior:
 
 - `2-src-com-pesquisa/` - campo de busca com botão **Buscar**, que procura filmes pelo título na OMDb só quando o botão é clicado
-- `src-meus-filmes/` - **Minha lista**: botão para adicionar filmes à lista de preferidos, aba para ver e avaliar só esses filmes, lista e notas salvas no navegador
+- `3-src-meus-filmes/` - sem a lista inicial: a tela mostra só o que o aluno pesquisa ou adiciona à **Minha lista** (botão de adicionar, aba para ver e avaliar os filmes escolhidos, lista e notas salvas no navegador)
 
 Para usar um passo (dentro da pasta `aula4`):
 
 ```
-xcopy src-meus-filmes src /E /Y /I
+xcopy 3-src-meus-filmes src /E /Y /I
 ```

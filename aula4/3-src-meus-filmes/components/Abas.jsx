@@ -3,10 +3,10 @@ export default function Abas({ atual, onMudar, quantidade }) {
     <nav className="abas">
       <button
         type="button"
-        className={atual === 'catalogo' ? 'aba ativa' : 'aba'}
-        onClick={() => onMudar('catalogo')}
+        className={atual === 'pesquisa' ? 'aba ativa' : 'aba'}
+        onClick={() => onMudar('pesquisa')}
       >
-        Catálogo
+        Pesquisa
       </button>
       <button
         type="button"

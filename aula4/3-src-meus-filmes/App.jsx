@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import useFilmes from './hooks/useFilmes.js'
 import usePesquisa from './hooks/usePesquisa.js'
 import useMinhaLista from './hooks/useMinhaLista.js'
 import useNotas from './hooks/useNotas.js'
@@ -8,28 +7,14 @@ import Abas from './components/Abas.jsx'
 import Busca from './components/Busca.jsx'
 import Filme from './components/Filme.jsx'
 
-const titulos = [
-  'Interstellar',
-  'The Lord of the Rings: The Fellowship of the Ring',
-  'The Matrix',
-  'The Shawshank Redemption',
-  'The Godfather',
-  'The Dark Knight',
-  'Pulp Fiction',
-  'Fight Club',
-  'Forrest Gump',
-  'Inception',
-]
-
 export default function App() {
-  const { filmes, erro, carregando } = useFilmes(titulos)
   const { resultados, pesquisando, erroBusca, pesquisar } = usePesquisa()
   const { minhaLista, estaNaLista, alternar } = useMinhaLista()
   const [busca, setBusca] = useState('')
-  const [aba, setAba] = useState('catalogo')
+  const [aba, setAba] = useState('pesquisa')
 
-  const noCatalogo = aba === 'catalogo'
-  const lista = noCatalogo ? resultados ?? filmes : minhaLista
+  const naPesquisa = aba === 'pesquisa'
+  const lista = naPesquisa ? resultados ?? [] : minhaLista
   const { notas, avaliar, avaliados, media } = useNotas(lista)
 
   function limpar() {
@@ -41,7 +26,7 @@ export default function App() {
     <>
       <Cabecalho avaliados={avaliados} total={lista.length} media={media} />
       <Abas atual={aba} onMudar={setAba} quantidade={minhaLista.length} />
-      {noCatalogo && (
+      {naPesquisa && (
         <Busca
           valor={busca}
           onMudar={setBusca}
@@ -50,14 +35,15 @@ export default function App() {
           buscando={pesquisando}
         />
       )}
-      {noCatalogo && erro && <p>{erro}</p>}
-      {noCatalogo && erroBusca && <p>{erroBusca}</p>}
-      {noCatalogo && carregando && <p className="carregando">Carregando filmes...</p>}
-      {noCatalogo && resultados && resultados.length === 0 && (
+      {naPesquisa && erroBusca && <p>{erroBusca}</p>}
+      {naPesquisa && !resultados && (
+        <p className="vazio">Busque um filme pelo título (em inglês) para começar.</p>
+      )}
+      {naPesquisa && resultados && resultados.length === 0 && (
         <p className="vazio">Nenhum filme encontrado.</p>
       )}
-      {!noCatalogo && minhaLista.length === 0 && (
-        <p className="vazio">Sua lista está vazia. Adicione filmes pelo catálogo.</p>
+      {!naPesquisa && minhaLista.length === 0 && (
+        <p className="vazio">Sua lista está vazia. Adicione filmes pela pesquisa.</p>
       )}
 
       <main className="lista">

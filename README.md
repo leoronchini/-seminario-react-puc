@@ -37,7 +37,7 @@ Também estão em `aula2/`:
 
 - `src/`: o código final da aula 3 com 10 filmes (escolhidos pelo nome) vindos da API da OMDb, no lugar do array `filmes`, e um aviso de "carregando". Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
 - `2-src-com-pesquisa/`: o passo anterior com um campo de busca e um botão **Buscar**, que procura filmes pelo título na OMDb só quando o botão é clicado
-- `src-meus-filmes/`: o passo anterior com a **Minha lista**: botão para adicionar filmes aos preferidos, aba para ver e avaliar só esses filmes, lista e notas salvas no navegador
+- `3-src-meus-filmes/`: o passo anterior sem a lista inicial: a tela mostra só o que o aluno pesquisa ou adiciona à **Minha lista** (botão de adicionar, aba para ver e avaliar os filmes escolhidos, lista e notas salvas no navegador)
 
 ### Projeto final (`aula5/`)
 
