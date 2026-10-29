@@ -1,7 +1,9 @@
 const chave = import.meta.env.VITE_OMDB_KEY
 
-export function buscarFilme(id) {
-  return fetch(`https://www.omdbapi.com/?i=${id}&apikey=${chave}`)
+export function buscarFilme(titulo) {
+  const url = `https://www.omdbapi.com/?t=${encodeURIComponent(titulo)}&type=movie&apikey=${chave}`
+
+  return fetch(url)
     .then((resposta) => resposta.json())
     .then((dados) => {
       if (dados.Response === 'False') {

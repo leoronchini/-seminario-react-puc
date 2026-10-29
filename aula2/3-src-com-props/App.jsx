@@ -14,7 +14,9 @@ export default function App() {
 
       <main className="lista">
         {filmes.map((filme) => (
-          <Filme key={filme.id} titulo={filme.titulo} ano={filme.ano} />
+          <Filme key={filme.id} 
+          titulo={filme.titulo} 
+          ano={filme.ano} />
         ))}
       </main>
     </>

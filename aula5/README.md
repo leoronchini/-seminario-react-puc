@@ -25,10 +25,8 @@ O passo a passo para conseguir a chave está no `README.md` da pasta `aula4`. O 
 
 É o código final da aula 4, agora com um catálogo de 24 filmes:
 
-- `App.jsx` - lista `ids` com 24 filmes e a mesma tela da aula 4
-- `hooks/useFilmes.js` - o mesmo hook da aula 4, que agora também avisa quando ainda está carregando
-- `services/omdb.js`, `hooks/useNotas.js` e os componentes - iguais aos da aula 4
-- `index.css` - o mesmo CSS, com uma linha a mais para os cards quebrarem de linha
+- `App.jsx` - lista `ids` com 24 filmes (os 10 da aula 4 mais 14 novos) e a mesma tela da aula 4
+- `hooks/useFilmes.js`, `services/omdb.js`, `hooks/useNotas.js`, os componentes e o `index.css` - iguais aos da aula 4
 
 ## Passos da aula
 

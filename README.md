@@ -11,7 +11,7 @@ Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: pri
 | `aula1/` | Revisão de HTML, CSS e JavaScript: `filmes.html`, `estilo.css` e `script.js` |
 | `aula2/` | Primeiros passos em React: projeto criado com Vite e os passos da aula (componentes, props e imagem) |
 | `aula3/` | Estado em React: `useState` e hook próprio (`useNotas`) |
-| `aula4/` | Consumo de API: filmes buscados na OMDb com `fetch` e `useEffect` |
+| `aula4/` | Consumo de API: filmes buscados na OMDb com `fetch` e `useEffect`, e pesquisa por título |
 | `aula5/` | Projeto final: catálogo de filmes, pesquisa por título e CSS completo |
 
 ### Passos da aula 2 (`aula2/`)
@@ -35,11 +35,12 @@ Também estão em `aula2/`:
 
 ### Passos da aula 4 (`aula4/`)
 
-- `src/`: o código final da aula 3 com os filmes vindos da API da OMDb, no lugar do array `filmes`. Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
+- `src/`: o código final da aula 3 com 10 filmes (escolhidos pelo nome) vindos da API da OMDb, no lugar do array `filmes`, e um aviso de "carregando". Precisa de uma chave gratuita da OMDb, guardada no arquivo `.env` (veja `aula4/README.md`)
+- `2-src-com-pesquisa/`: o passo anterior com um campo de busca e um botão **Buscar**, que procura filmes pelo título na OMDb só quando o botão é clicado
 
 ### Passos da aula 5 (`aula5/`)
 
-- `src/`: o código final da aula 4 com um catálogo de 24 filmes e um aviso de "carregando"
+- `src/`: o código final da aula 4 com o catálogo aumentado de 10 para 24 filmes
 - `1-pesquisa/`: o passo anterior com um campo de busca que filtra o catálogo pelo título
 - `2-estilo/`: o passo anterior com classes para o CSS e o `index.css` completo, com o visual final
 
