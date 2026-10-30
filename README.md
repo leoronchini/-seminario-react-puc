@@ -4,12 +4,12 @@ Material do curso de **React** para o **2º período do curso de Ciência da Com
 
 Ao longo das aulas construímos um mesmo projeto, o **Avaliador de Filmes**: primeiro com HTML, CSS e JavaScript puro, depois refeito em React, para deixar clara a diferença entre as duas abordagens.
 
-##Conteúdo
-Na raiz desse repositorio se encontra o arquivo seminarios-react.pdf, com todo o material apresentado em aula
+## Conteúdo
+Na raiz desse repositório se encontra o arquivo **seminarios-react.pdf**, com todo o material apresentado em aula
 
 ## Tecnologias e ferramentas
 
-O projeto usa **HTML**, **CSS** e **JavaScript** (ES6+) puro na aula 1 e, a partir da aula 2, **React** com **JSX**, criado com o **Vite** e organizado em **componentes** que recebem dados por **props**. O estado é gerenciado com os **hooks** `useState` e `useEffect`, e a lógica é reaproveitada em **hooks próprios** . Os dados vêm da **API da OMDb**, consumida com **fetch**, **Promises** e **async/await**, com a chave guardada em **variáveis de ambiente** (`.env`). A lista e as notas ficam salvas no navegador com **localStorage**. O código roda em **Node.js** com **npm**, é verificado com o **oxlint** e escrito no **VS Code**, com versionamento em **Git**.
+O projeto usa **HTML**, **CSS** e **JavaScript**  puro na aula 1 e, a partir da aula 2, **React** com **JSX**, criado com o **Vite** e organizado em **componentes** que recebem dados por **props**. O estado é gerenciado com os **hooks** `useState` e `useEffect`, e a lógica é reaproveitada em **hooks próprios** . Os dados vêm da **API da OMDb**, consumida com **fetch**, **Promises** e **async/await**, com a chave guardada em **variáveis de ambiente** (`.env`). A lista e as notas ficam salvas no navegador com **localStorage**. O código roda em **Node.js** com **npm**, é verificado com o **oxlint** e escrito no **VS Code**, com versionamento em **Git**.
 
 ## Estrutura do repositório
 
