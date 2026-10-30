@@ -1,6 +1,6 @@
 # Passo 2: componentes
 
-Parte do passo 1 (`src/`) e separa partes da tela em componentes.
+Parte do passo 1 (`1-src-inicial/`) e separa partes da tela em componentes.
 
 ## O que mudou no código
 
@@ -13,7 +13,7 @@ Parte do passo 1 (`src/`) e separa partes da tela em componentes.
   - dentro do componente `Filme`, no lugar da barra e do texto "Sem nota", entra `<Avaliacao />`.
 - O array `filmes`, o resto do componente `Filme`, o `.map()`, o `main.jsx` e o `index.css` continuam iguais.
 
-No `src/` o resumo usava `{filmes.length}`. O `Cabecalho` ainda não recebe dados, então o 3 fica escrito direto no texto. Na aula 3 ele passa a receber o total por props.
+No `1-src-inicial/` o resumo usava `{filmes.length}`. O `Cabecalho` ainda não recebe dados, então o 3 fica escrito direto no texto. Na aula 3 ele passa a receber o total por props.
 
 ## O que mudou na tela
 

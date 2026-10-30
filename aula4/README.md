@@ -32,30 +32,20 @@ copy .env.example .env
 
 O arquivo `.env` não vai para o GitHub (está no `.gitignore`). O `.env.example` explica o limite de requisições.
 
-## Código inicial (`src/`)
-
-É o código final da aula 3 (`aula3/1-hook/`), agora com os filmes vindos da API:
-
-- `App.jsx` - guarda os nomes (em inglês) de 10 filmes e monta a tela com os filmes que o `useFilmes` entrega
-- `services/omdb.js` - função `buscarFilme(titulo)`: busca um filme na OMDb pelo nome com `fetch`, usando a chave do `.env`
-- `hooks/useFilmes.js` - hook que busca a lista de filmes com `useEffect` e guarda o resultado, o erro e o "carregando" em `useState`
-- `hooks/useNotas.js` - o mesmo hook da aula 3
-- `components/Cabecalho.jsx` - igual ao da aula 3
-- `components/Filme.jsx` - card de um filme, com o pôster vindo da API
-- `components/Avaliacao.jsx` - igual ao da aula 3
-- `index.css` - o mesmo CSS da aula 3, com uma linha a mais para os cards quebrarem de linha
-
-Os pôsteres da pasta `assets/` deixam de ser usados: as imagens agora vêm da OMDb.
-
 ## Passos da aula
 
-Cada pasta é uma cópia completa do `src/` naquele passo e contém todo o código do passo anterior:
+Cada pasta é uma cópia completa do passo anterior com uma novidade. O primeiro passo parte do código final da aula 3 (`aula3/2-src-com-hook/`):
 
+- `1-src-com-api/` - os filmes vêm da API da OMDb (pelo nome) no lugar do array `filmes`, com um aviso de "carregando". É aqui que o pôster do filme aparece pela primeira vez, vindo da API. Arquivos novos: `services/omdb.js` (função `buscarFilme(titulo)`, que usa a chave do `.env`) e `hooks/useFilmes.js` (busca a lista com `useEffect` e guarda filmes, erro e "carregando" em `useState`).
 - `2-src-com-pesquisa/` - campo de busca com botão **Buscar**, que procura filmes pelo título na OMDb só quando o botão é clicado
 - `3-src-meus-filmes/` - sem a lista inicial: a tela mostra só o que o aluno pesquisa ou adiciona à **Minha lista** (botão de adicionar, aba para ver e avaliar os filmes escolhidos, lista e notas salvas no navegador)
 
-Para usar um passo (dentro da pasta `aula4`):
+## Qual passo o projeto executa
 
+O `index.html` aponta para a pasta do passo no `<script>`:
+
+```html
+<script type="module" src="/3-src-meus-filmes/main.jsx"></script>
 ```
-xcopy 3-src-meus-filmes src /E /Y /I
-```
+
+Para ver outro passo, troque o nome da pasta nessa linha (por exemplo, `/1-src-com-api/main.jsx`).

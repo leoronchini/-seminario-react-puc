@@ -1,6 +1,6 @@
 # Passo 1 da aula 4: consumindo a API
 
-Parte do código final da aula 3 (`aula3/1-hook/`) e troca o array `filmes` escrito à mão por filmes buscados na API da OMDb, pelo nome.
+Parte do código final da aula 3 (`aula3/2-src-com-hook/`) e troca o array `filmes` escrito à mão por filmes buscados na API da OMDb, pelo nome.
 
 Antes de rodar, siga no `README.md` da pasta `aula4` os passos para conseguir a chave e criar o arquivo `.env`.
 
@@ -22,9 +22,9 @@ Antes de rodar, siga no `README.md` da pasta `aula4` os passos para conseguir a 
   - `useFilmes(titulos)` entrega os filmes, o erro e o `carregando`;
   - enquanto carrega, aparece o texto "Carregando filmes...". A classe `carregando` desse texto só será usada pelo CSS na aula 5;
   - o resto da tela continua como antes.
-- `components/Filme.jsx`: `imagem` agora já é o endereço completo do pôster, então a linha que montava o caminho com `new URL` sai.
-- `index.css`: nova linha `flex-wrap: wrap` em `.lista`, para os cards quebrarem de linha.
-- A pasta `assets/` (pôsteres salvos no projeto) deixa de existir.
+- `index.css`: nova linha `flex-wrap: wrap` em `.lista`, para os cards quebrarem de linha, e a regra `.filme img`, que deixa todos os pôsteres do mesmo tamanho.
+- `components/Filme.jsx`: a imagem do filme aparece pela primeira vez. O card ganha a prop `imagem` e o `<img>` com o pôster que vem da API.
+- `App.jsx` passa também `imagem={filme.imagem}` para o `Filme`.
 - `Cabecalho.jsx`, `Avaliacao.jsx`, `hooks/useNotas.js` e `main.jsx` continuam iguais.
 
 ## O que mudou na tela

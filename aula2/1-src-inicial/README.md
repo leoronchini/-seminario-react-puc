@@ -36,10 +36,10 @@ Abra no navegador o endereço que aparecer (normalmente `http://localhost:5173`)
 
 ## O que tem no código
 
-O Vite cria vários arquivos de exemplo. Aqui só mexemos em dois:
+O Vite cria vários arquivos de exemplo. Aqui só mexemos em dois (dentro de `1-src-inicial/`, a pasta que o Vite chama de `src`):
 
-- `src/App.jsx`: o array `filmes`, o componente `Filme` (um card) e o componente `App`, que mostra o título, o resumo e a lista de cards com `.map()`.
-- `src/index.css`: o estilo simples da página.
+- `App.jsx`: o array `filmes`, o componente `Filme` (um card) e o componente `App`, que mostra o título, o resumo e a lista de cards com `.map()`.
+- `index.css`: o estilo simples da página.
 
 O `main.jsx` continua como o Vite criou.
 

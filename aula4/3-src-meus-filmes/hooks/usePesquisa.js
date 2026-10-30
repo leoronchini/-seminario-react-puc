@@ -19,6 +19,7 @@ export default function usePesquisa() {
     pesquisarFilmes(termo)
       .then(setResultados)
       .catch((erro) => {
+        console.error('Erro OMDb:', erro)
         setResultados(null)
         setErroBusca(`Não foi possível pesquisar (${erro.message}).`)
       })

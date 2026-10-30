@@ -21,21 +21,19 @@ copy .env.example .env
 
 O passo a passo para conseguir a chave, e o limite de requisições, estão no `README.md` da pasta `aula4` e no `.env.example`. O `.env` não vai para o GitHub.
 
-## Projeto final (`src/`)
+## Projeto final (`1-src-final/`)
 
-É o código final da aula 4 (`aula4/2-src-com-pesquisa/`) com a **Minha lista**, as **estrelas** e o **CSS completo**, tudo de uma vez:
+É o código final da aula 4 (`aula4/3-src-meus-filmes/`) com as **estrelas** e o **CSS completo**. A pesquisa, a **Minha lista** e as notas salvas no navegador já vêm da aula 4:
 
-- `App.jsx` - catálogo com pesquisa e abas **Catálogo** e **Minha lista**
-- `hooks/useArmazenado.js` - como o `useState`, mas guarda o valor no navegador
-- `hooks/useMinhaLista.js` - a lista de filmes favoritos do aluno
-- `hooks/useNotas.js` - as notas, agora salvas no navegador
-- `components/Abas.jsx` - os botões **Catálogo** e **Minha lista**
-- `components/Filme.jsx` - card do filme, com o botão **Adicionar à minha lista**
-- `components/Avaliacao.jsx` e `components/Estrelas.jsx` - barra de nota e estrelas acesas
+- `components/Estrelas.jsx` - estrelas acesas conforme a nota (novo)
+- `components/Avaliacao.jsx` - mostra as estrelas acima da barra de nota
+- `App.jsx` - agrupa título, abas e busca em um `<header className="topo">` e dá a classe `erro` à mensagem de erro
 - `index.css` - o CSS completo, com o visual final
-- `hooks/useFilmes.js`, `hooks/usePesquisa.js`, `services/omdb.js`, `components/Busca.jsx` e `Cabecalho.jsx` - iguais aos da aula 4
+- o resto (`hooks/`, `services/`, `Abas.jsx`, `Busca.jsx`, `Cabecalho.jsx`, `Filme.jsx`) - igual ao da aula 4
 
-O `src/README.md` lista tudo o que mudou em relação à aula 4.
+O `1-src-final/README.md` lista tudo o que mudou em relação à aula 4.
+
+O `index.html` aponta para a pasta no `<script>`: `src="/1-src-final/main.jsx"`.
 
 ## Onde ficam os dados
 

@@ -9,7 +9,10 @@ export default function useFilmes(titulos) {
   useEffect(() => {
     Promise.all(titulos.map((titulo) => buscarFilme(titulo)))
       .then(setFilmes)
-      .catch(() => setErro('Não foi possível carregar os filmes. Confira a chave no arquivo .env'))
+      .catch((e) => {
+        console.error('Erro OMDb:', e)
+        setErro(`Não foi possível carregar os filmes: ${e.message}`)
+      })
       .finally(() => setCarregando(false))
   }, [titulos])
 

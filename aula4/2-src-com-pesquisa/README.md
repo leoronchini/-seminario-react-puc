@@ -1,6 +1,6 @@
 # Passo 2 da aula 4: pesquisa
 
-Parte do passo 1 (`src/`) e acrescenta uma pesquisa de filmes pelo título, que só consulta a API quando o aluno clica em **Buscar**.
+Parte do passo 1 (`1-src-com-api/`) e acrescenta uma pesquisa de filmes pelo título, que só consulta a API quando o aluno clica em **Buscar**.
 
 ## O que mudou no código
 

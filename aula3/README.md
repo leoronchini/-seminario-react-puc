@@ -9,23 +9,19 @@ npm run dev
 
 Abra o endereço que aparecer (normalmente http://localhost:5173).
 
-## Código inicial (`src/`)
+## Passos da aula
 
-É o código do passo 4 da aula 2, já com `useState`:
+Cada pasta é uma cópia completa do passo anterior com uma novidade. O primeiro passo parte do código final da aula 2 (`aula2/3-src-com-props/`):
 
-- `App.jsx` - lista `filmes` (a mesma da aula 2), guarda as notas por `id` com `useState` e calcula quantos filmes foram avaliados e a média
-- `components/Cabecalho.jsx` - título e resumo (quantos avaliados e média)
-- `components/Filme.jsx` - card de um filme, com o pôster
-- `components/Avaliacao.jsx` - slider da nota e texto "Sua nota"
-- `assets/` - pôsteres dos filmes
-- `index.css` - o mesmo CSS da aula 2
+- `1-src-com-usestate/` - `useState`: as notas ficam guardadas no `App.jsx`, por `id` do filme. O resumo mostra quantos filmes foram avaliados e a média.
+- `2-src-com-hook/` - o mesmo código com a lógica do `useState` movida para um hook próprio, `hooks/useNotas.js`.
 
-## Pasta da aula
+## Qual passo o projeto executa
 
-- `1-hook/` - cópia completa do `src/`, com a lógica do `useState` movida para um hook próprio, `hooks/useNotas.js`
+O `index.html` aponta para a pasta do passo no `<script>`:
 
-Para usar (dentro da pasta `aula3`):
-
+```html
+<script type="module" src="/2-src-com-hook/main.jsx"></script>
 ```
-xcopy 1-hook src /E /Y /I
-```
+
+Para ver outro passo, troque o nome da pasta nessa linha (por exemplo, `/1-src-com-usestate/main.jsx`).
